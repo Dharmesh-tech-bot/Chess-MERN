@@ -6,10 +6,10 @@ A feature-rich, real-time multiplayer chess game built with vanilla JavaScript, 
 ![Status](https://img.shields.io/badge/Status-Active-success)
 ![License](https://img.shields.io/badge/License-ISC-yellow)
 
-## ✨ Features
+## Features
 
 ### Core Gameplay
-- ✅ **Full Chess Rules Implementation**
+- **Full Chess Rules Implementation**
   - All standard piece movements (Pawn, Knight, Bishop, Rook, Queen, King)
   - Special moves: Castling (Kingside & Queenside)
   - En Passant captures
@@ -23,9 +23,9 @@ A feature-rich, real-time multiplayer chess game built with vanilla JavaScript, 
 - 📊 **Game Status Bar** - Real-time updates on game state
 
 ### User Interface
-- 🎨 **Beautiful Gradient Design** - Modern purple gradient theme
-- 💫 **Splash Screen Animation** - Animated intro screen
-- 🎯 **Visual Move Indicators**
+- **Beautiful Gradient Design** - Modern purple gradient theme
+- **Splash Screen Animation** - Animated intro screen
+- **Visual Move Indicators**
   - Selected piece highlighting
   - Valid move indicators (green dots)
   - Capture move highlighting (red border)
@@ -46,10 +46,10 @@ A feature-rich, real-time multiplayer chess game built with vanilla JavaScript, 
 - 💾 **Auto-save** - Game state persists in localStorage
 
 ### Technical Features
-- 📝 **FEN Notation Support** - Import/export game states
-- 🎲 **Game State Management** - Complete state tracking
-- 📱 **Responsive Design** - Works on desktop and tablet
-- 🚀 **Fast & Lightweight** - No heavy frameworks
+- **FEN Notation Support** - Import/export game states
+- **Game State Management** - Complete state tracking
+- **Responsive Design** - Works on desktop and tablet
+- **Fast & Lightweight** - No heavy frameworks
 
 ## 🛠️ Technologies Used
 
@@ -70,7 +70,7 @@ A feature-rich, real-time multiplayer chess game built with vanilla JavaScript, 
 - **Event-Driven** - Socket.IO events for multiplayer
 - **Modular Code** - Separated concerns (board, rules, main logic)
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 - Node.js (v14 or higher)
@@ -103,7 +103,7 @@ A feature-rich, real-time multiplayer chess game built with vanilla JavaScript, 
    http://localhost:3000
    ```
 
-## 🎮 How to Play
+## How to Play
 
 ### Starting a Game
 
@@ -162,7 +162,7 @@ chess-game/
     └── main.js        # Main game logic and event handlers
 ```
 
-## 🎯 Key Classes
+## Key Classes
 
 ### ChessBoard (`board.js`)
 - Manages board state and piece positions
@@ -185,7 +185,7 @@ chess-game/
 - Updates UI based on game state
 - Chat functionality
 
-## 🚀 Features in Detail
+## Features in Detail
 
 ### Move Validation
 - Pieces can only move according to chess rules
@@ -221,7 +221,7 @@ All colors and styles are in `css/style.css`:
 - Gradient theme: `background: linear-gradient(...)`
 - Piece size: `.square { font-size: 50px; }`
 
-## 🐛 Known Limitations
+## Known Limitations
 
 - Pawn promotion currently auto-promotes to Queen only
 - No chess clock/timer implemented
@@ -229,7 +229,7 @@ All colors and styles are in `css/style.css`:
 - No game replay feature
 - No draw by threefold repetition or 50-move rule
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 - [ ] Custom pawn promotion choice (Queen, Rook, Bishop, Knight)
 - [ ] Chess timer/clock for timed games
@@ -244,11 +244,7 @@ All colors and styles are in `css/style.css`:
 - [ ] Sound effects for moves
 - [ ] Drag-and-drop piece movement
 
-## 📝 License
-
-ISC License - Feel free to use and modify!
-
-## 👨‍💻 Development
+##  Development
 
 ### Running in Development Mode
 ```bash
@@ -263,29 +259,13 @@ Open multiple browser tabs to simulate two players:
 3. Click "Start Game" in either tab
 4. Play moves alternately between tabs
 
-## 🤝 Contributing
-
-Contributions are welcome! Areas for improvement:
-- Better AI opponent
-- Additional chess variants (Chess960, etc.)
-- Mobile touch controls optimization
-- Accessibility improvements
-- Internationalization (i18n)
-
-## 📞 Support
+   
+## Support
 
 For issues or questions:
 1. Check the code comments in the source files
 2. Review the game rules implementation
 3. Test in browser console for debugging
-
-## 🎉 Credits
-
-Built with ❤️ using:
-- Chess piece Unicode symbols
-- Socket.IO for real-time features
-- Express.js for server
-- Modern CSS gradients and animations
 
 ---
 
