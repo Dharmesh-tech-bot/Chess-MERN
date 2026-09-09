@@ -67,7 +67,7 @@ class ChessRules {
     testBoard.setPiece(toRow, toCol, piece);
     testBoard.setPiece(fromRow, fromCol, '');
 
-    // ✅ SWITCH TURN ON TEST BOARD
+    //  SWITCH TURN ON TEST BOARD
     testBoard.currentTurn = color === 'white' ? 'black' : 'white';
 
     const testRules = new ChessRules(testBoard);
