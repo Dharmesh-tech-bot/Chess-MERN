@@ -15,8 +15,8 @@
 
 // const PORT = process.env.PORT || 3000;
 // app.listen(PORT, () => {
-//     console.log(`🚀 Chess Server running on http://localhost:${PORT}`);
-//     console.log('✅ Ready to play! Open your browser and start the game!');
+//     console.log(`Chess Server running on http://localhost:${PORT}`);
+//     console.log('Ready to play! Open your browser and start the game!');
 // });
 
 
@@ -37,7 +37,7 @@ const io = socketIo(server, {
     }
 });
 
-// Serve static files ✅ FIXED
+// Serve static files FIXED
 app.use(express.static(path.join(__dirname)));
 app.use('/css', express.static(path.join(__dirname, 'css')));
 app.use('/js', express.static(path.join(__dirname, 'js')));
@@ -47,7 +47,7 @@ const games = new Map(); // roomId -> gameState
 const players = new Map(); // socketId -> playerInfo
 
 io.on('connection', (socket) => {
-    console.log('✅ Player connected:', socket.id);
+    console.log(' Player connected:', socket.id);
     
     // Player joins game room
     socket.on('joinGame', (playerName) => {
@@ -138,13 +138,13 @@ io.on('connection', (socket) => {
     });
     
     socket.on('disconnect', () => {
-        console.log('❌ Player disconnected:', socket.id);
+        console.log('Player disconnected:', socket.id);
         players.delete(socket.id);
     });
 });
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
-    console.log(`🚀 Chess Server running on http://localhost:${PORT}`);
-    console.log('✅ Ready for players!');
+    console.log(` Chess Server running on http://localhost:${PORT}`);
+    console.log('Ready for players!');
 });
