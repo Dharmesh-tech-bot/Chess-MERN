@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Chess - Two Player Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splashScreen">
+        <div class="splash-text">CHESS</div>
+    </div>
+
+    <h1 style="color: white; margin-bottom: 20px; text-align: center;">🔥 Live Chess - Two Players</h1>
+    
+    <!-- Welcome Message (shown after names entered) -->
+    <div id="welcomeMessage" class="welcome-message hidden">
+        <h2>🎉 Welcome!</h2>
+        <p id="welcomeText"></p>
+    </div>
+    
+    <div class="container">
+        <!-- Main Game Panel -->
+        <div class="game-panel" style="flex: 1; max-width: 700px;">
+            <div id="statusBar" class="status-bar">Enter both player names and click Start Game!</div>
+            
+            <!-- Player Name Inputs -->
+            <div style="text-align: center; margin-bottom: 15px; display: flex; gap: 10px; justify-content: center;">
+                <input 
+                    id="player1NameInput" 
+                    type="text" 
+                    placeholder="Player 1 (White)" 
+                    style="padding: 10px; font-size: 16px; border-radius: 8px; border: 2px solid #667eea; width: 200px;"
+                />
+                <input 
+                    id="player2NameInput" 
+                    type="text" 
+                    placeholder="Player 2 (Black)" 
+                    style="padding: 10px; font-size: 16px; border-radius: 8px; border: 2px solid #764ba2; width: 200px;"
+                />
+            </div>
+            
+            <div id="chessboard"></div>
+            
+            <div class="controls">
+                <button id="startBtn">Start Game</button>
+                <button id="undoBtn" disabled>↶ Undo</button>
+                <button id="quitBtn" disabled>🏳️ Quit</button>
+                <button id="newGameBtn" disabled>New Game</button>
+            </div>
+            
+            <div class="player-info">
+                <span id="whitePlayer" class="player-name">White: Waiting...</span>
+                <span id="currentTurn" class="current-turn">White's turn</span>
+                <span id="blackPlayer" class="player-name">Black: Waiting...</span>
+            </div>
+        </div>
+        
+        <!-- Right Panel - History & Chat -->
+        <div class="game-panel" style="width: 350px;">
+            <h3 style="margin-bottom: 10px;">Move History</h3>
+            <div id="moveHistory" class="move-history">
+                <div style="color: #999; font-style: italic;">Move history will appear here...</div>
+            </div>
+            
+            <h3 style="margin: 20px 0 10px 0;">Captured Pieces</h3>
+            <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+                <div>
+                    <div>White captured:</div>
+                    <div id="whiteCaptured" class="captured"></div>
+                </div>
+                <div>
+                    <div>Black captured:</div>
+                    <div id="blackCaptured" class="captured"></div>
+                </div>
+            </div>
+            
+            <h3 style="margin-bottom: 10px;">Chat</h3>
+            <div id="chatBox" class="chat-box">
+                <div style="color: #999; font-style: italic;">Chat messages will appear here...</div>
+            </div>
+            <div class="chat-input">
+                <input id="chatInput" type="text" placeholder="Type message... (Enter)">
+                <button id="sendChatBtn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Socket.IO Client Library -->
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <!-- Scripts - PERFECT ORDER -->
+    <script src="js/board.js"></script>
+    <script src="js/rules.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
